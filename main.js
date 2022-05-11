@@ -1,3 +1,5 @@
+/*chamando function scroll assim que abrir a janela*/
+// adicionando evento na lista onScroll pela janela
 window.addEventListener('scroll', onScroll)
 
 onScroll()
