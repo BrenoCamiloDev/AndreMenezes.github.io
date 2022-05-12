@@ -606,6 +606,7 @@ footer .social-links {
   /*espaçamento de todo o site*/ 
  .wrapper{
    width: min(112rem, 100%);
+   display: grid;
  }
 
 
@@ -739,7 +740,6 @@ footer .social-links {
 
 
   /*button menu links*/
-
   nav#navigation .menu a.button:hover{
     background: var(--primary-color);
     color: white;
@@ -757,18 +757,99 @@ footer .social-links {
   }
 
 
-  
-
-
-  
-
-
-
-
-
-
-
   /*====== home  =========================================*/ 
+
+
+
+
+
+
+
+
+  
+  #home .wrapper{
+    grid-template-columns:60.5rem 1fr;
+    grid-template-areas: 'A B'
+    'C C';
+    
+  }
+
+  #home .col-a {
+    grid-area: A;
+    text-align: left;
+  }
+  
+
+  #home .col-b {
+    grid-area: B;
+  }
+    
+  #home .stats {
+    grid-area: C;
+    flex-direction: row;
+    border: solid transparent;
+    border-radius: 0.9rem;
+    padding: 6rem;
+    gap:0;
+  }
+      
+  #home .col-b img{
+    width: 42rem;
+  }
+
+
+/*<HEADER>*/
+  #home h4{
+    font-weight: 700;
+font-size: 1.4rem;
+line-height: 150%;
+
+  }
+
+  #home h1{
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 130%;
+  }
+
+  /*</HEADER>*/
+  
+  /*<CONTENT>*/
+  #home .content p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  #home .content a{
+    margin: 0;
+    margin-bottom: 8.4rem;
+  }
+
+
+  /*</CONTENT>*/
+
+  /*</Stats>*/
+#home .stats .stat {
+  flex: 1.5;
+}
+  #home .stats .stat + .stat {
+    border-left: 0.2rem solid var(--primary-color);
+    padding-left: ;
+  }
+ 
+
+
+
+  /*</Stats>*/
+
+
+
+  
+
+
+  #home {
+
+  }
 
 
   
