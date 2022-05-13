@@ -94,6 +94,17 @@ body{
   align-items: center;
 }
 
+.col-a {
+  grid-area: A;
+  text-align: left;
+}
+
+
+.col-b {
+  grid-area: B;
+}
+
+
 ul {
   list-style: none;
 }
@@ -121,7 +132,7 @@ section .content p{
   color: var(--paragraph);
   margin-bottom: 1.6rem;
 }
-section h2{
+section header h2{
   font-size: 3rem;
   line-height: 3.9rem;
   color: var(--headline);
@@ -578,6 +589,11 @@ footer .social-links {
 
 @media (min-width:1024px){
 
+  section h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
 
   
 
@@ -587,9 +603,9 @@ footer .social-links {
   nav#navigation .wrapper *{
     padding: 0;
     margin: 0;
+    display: initial;
     visibility: initial;
     position: initial;
-    display: initial;
     opacity: initial;
     flex-direction: initial;
     font-size: initial;
@@ -768,8 +784,9 @@ footer .social-links {
   /*====== home  =========================================*/ 
   
  #home::before{
-  height: calc(76% - var(--nav-heigth));
+  height: calc(96% - var(--nav-heigth));
   }
+
   #home {
   padding-top: var(--nav-heigth);
   }
@@ -780,17 +797,7 @@ footer .social-links {
     'C C';
     
   }
-
-  #home .col-a {
-    grid-area: A;
-    text-align: left;
-  }
   
-
-  #home .col-b {
-    grid-area: B;
-  }
-    
   #home .stats {
     grid-area: C;
     flex-direction: row;
@@ -849,22 +856,64 @@ footer .social-links {
 
   
   /*====== SERVICES  =========================================*/ 
+  #services h2 {
+    width: 47rem;
+    margin-inline: auto;
+  }
 
+  #services.content .cards {
+    display: flex;
+  }
 
+  #services .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  #services .card {
+    width: 30%;
+    flex-grow: 1;
+  }
 
 
 
   
   /*====== ABOUT  =========================================*/ 
 
+  #about .wrapper {
+    grid-template-columns: 48rem 1fr;
+    grid-template-areas: 'B A';
+    gap: 6.7rem;
+  }
+
+
+
+
 
   
   /*====== CONTATO =========================================*/ 
 
 
-  
-  /*====== FOOTER =========================================*/ 
+  #contato .wrapper {
+    grid-template-columns: 1fr 48rem;
+    grid-template-areas: 'A B';
+  }
 
+  #contato h2 {
+  width: 30.4rem;
+  text-align: left;
+  }
+
+
+  /*====== FOOTER =========================================*/ 
+  footer .wrapper {
+    grid-template-columns: 25.6rem 1fr;
+    grid-template-areas: 'A B';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
 
 }
