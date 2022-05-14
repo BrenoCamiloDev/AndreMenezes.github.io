@@ -28,15 +28,6 @@ pois 100% == 16px
 
 
 
-
-
-
-
-
-
-
-
-
 /*====================codigos geral=====================*/
 
 *{
@@ -81,7 +72,7 @@ body{
 
 .wrapper {
   /*width responsivo */
-  width: min(50rem, 100%);
+  width: min(50rem,100%);
   margin-inline: auto;
   padding-inline: 2.4rem;
 
@@ -112,7 +103,7 @@ ul {
 /*padronizando o tamnho maximo da imagem conforme pagina*/
 img{
   max-width: 100%;
-}
+  }
 
 section {
   padding-block: 16rem;
@@ -145,6 +136,8 @@ section h4{
   line-height: 150%;
   letter-spacing: 0.08rem;
   margin-bottom: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .button{
@@ -497,7 +490,10 @@ body.menu-expanded button path{
 
 #about .content p{
   margin-bottom: 6rem;
+  width: 90%;
+
 }
+
 
 /*======================CONTACT===================================*/
 
@@ -528,7 +524,6 @@ body.menu-expanded button path{
 #contato .button {
   margin-top: 3.2rem;
 }
-
 
 /*================FOOTER======================================*/
 footer {
@@ -817,7 +812,6 @@ footer .social-links {
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 150%;
-
   }
 
   #home h1{
@@ -887,6 +881,10 @@ footer .social-links {
     gap: 6.7rem;
   }
 
+  #about h4 {
+
+  }
+
 
 
 
@@ -907,13 +905,21 @@ footer .social-links {
 
 
   /*====== FOOTER =========================================*/ 
-  footer .wrapper {
-    grid-template-columns: 25.6rem 1fr;
-    grid-template-areas: 'A B';
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  footer {
+    padding-block: 8rem;
   }
+  footer .wrapper {
+    grid-template-columns: 80% 30%;
+    grid-template-areas: 'A B';
+  }
+
+footer .col-a{
+  align-self: center;
+}
+footer .col-b{
+  align-self: center;
+  justify-content: flex-end;
+}
 
 
 }
